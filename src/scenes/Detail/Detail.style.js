@@ -18,8 +18,21 @@ export default style = StyleSheet.create({
   header: {
     backgroundColor: PRIMARY_COLOR,
     display: 'flex',
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    alignItems: 'center',
+  },
+  back: {
+    width: 160,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    paddingLeft: 20,
+  },
+  textBack: {
+    fontSize: 14,
+    color: '#ffffff',
+    width: '25%',
+    fontWeight: 'bold',
   },
   textHeader: {
     color: WHITE_COLOR,

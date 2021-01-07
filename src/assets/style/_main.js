@@ -15,6 +15,5 @@ export default global = StyleSheet.create({
   information: {
     fontSize: 16,
     color: '#6f6fb9',
-    width: '25%',
   },
 });

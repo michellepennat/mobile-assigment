@@ -6,38 +6,41 @@ import styles from './CardDetail.style';
 import global from '../../assets/style/_main';
 
 export default CardDetail = ({
-  textName,
-  textOrigin,
-  textStatus,
-  textSpecies,
-  textGender,
-  textCreated,
-  img,
-}) => {
-  return (
-    <View style={[styles.card]}>
-      {/* <Image source={require(img)}/> */}
-      <H1 style={[global.title, styles.title]}>{textName}</H1>
-      <View style={[styles.row]}>
-        <H2 style={[global.subtitle]}>Origin</H2>
-        <Text style={[global.information]}>{textOrigin}</Text>
-      </View>
-      <View style={[styles.row]}>
-        <H2 style={[global.subtitle]}>Status</H2>
-        <Text style={[global.information]}>{textStatus}</Text>
-      </View>
-      <View style={[styles.row]}>
-        <H2 style={[global.subtitle]}>Species</H2>
-        <Text style={[global.information]}>{textSpecies}</Text>
-      </View>
-      <View style={[styles.row]}>
-        <H2 style={[global.subtitle]}>Gender</H2>
-        <Text style={[global.information]}>{textGender}</Text>
-      </View>
-      <View style={[styles.row]}>
-        <H2 style={[global.subtitle]}>Created</H2>
-        <Text style={[global.information]}>{textCreated}</Text>
-      </View>
+  name,
+  origin,
+  status,
+  species,
+  gender,
+  created,
+  image,
+}) => (
+  <View style={[styles.card]}>
+    <Image
+      source={{
+        uri: image,
+      }}
+      style={{width: 100, height: 100}}
+    />
+    <H1 style={[global.title, styles.title]}>{name}</H1>
+    <View style={[styles.row]}>
+      <H2 style={[global.subtitle]}>Origin</H2>
+      <Text style={[global.information]}>{origin?.name}</Text>
     </View>
-  );
-};
+    <View style={[styles.row]}>
+      <H2 style={[global.subtitle]}>Status</H2>
+      <Text style={[global.information]}>{status}</Text>
+    </View>
+    <View style={[styles.row]}>
+      <H2 style={[global.subtitle]}>Species</H2>
+      <Text style={[global.information]}>{species}</Text>
+    </View>
+    <View style={[styles.row]}>
+      <H2 style={[global.subtitle]}>Gender</H2>
+      <Text style={[global.information]}>{gender}</Text>
+    </View>
+    <View style={[styles.row]}>
+      <H2 style={[global.subtitle]}>Created</H2>
+      <Text style={[global.information]}>{created}</Text>
+    </View>
+  </View>
+);
