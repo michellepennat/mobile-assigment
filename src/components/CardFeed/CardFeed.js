@@ -2,36 +2,32 @@ import React from 'react';
 
 import {Text, TouchableOpacity, Image, View} from 'react-native';
 import {H1, H2} from 'native-base';
+import styles from './CardFeed.style';
+import global from '../../assets/style/_main';
 
-export default CardFeed = (props) => {
-  const {
-      style, 
-      textName, 
-      textOrigin,
-      textNameStyle, 
-      width, 
-      radius, 
-      onPressAction
-    } = props;
+export default CardFeed = ({
+  textName,
+  textOrigin,
+  textCreated,
+  img,
+  onPressAction,
+}) => {
   return (
-    <TouchableOpacity>
-      <H1>{textName}</H1>
-      {/* <Image /> */}
-      <View>
-        <H2>Origin</H2>
-        <Text>Data</Text>
+    <TouchableOpacity style={[styles.card]}>
+      <H1 style={[global.title]}>{textName}</H1>
+      {/* <Image source={require(img)} /> */}
+      <View style={[styles.row]}>
+        <H2 style={[global.subtitle]}>Origin</H2>
+        <Text>{textOrigin}</Text>
       </View>
-      <View>
-        <H2>Created</H2>
-        <Text>Data</Text>
+      <View style={[styles.row]}>
+        <H2 style={[global.subtitle]}>Created</H2>
+        <Text>{textCreated}</Text>
       </View>
     </TouchableOpacity>
   );
 };
 
 CardFeed.defaultProps = {
-  height: 55,
-  radius: 0,
-  width: '80%',
   textStyle: {},
 };
