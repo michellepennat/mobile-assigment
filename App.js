@@ -1,17 +1,18 @@
 import React from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
-import {PRIMARY_COLOR} from './src/assets/style/_common';
+import {StatusBar} from 'react-native';
+import {View} from 'native-base';
+import {BACKGROUND_COLOR, PRIMARY_COLOR} from './src/assets/style/_common';
 
+import Detail from './src/scenes/Detail/Detail';
 import Feed from './src/scenes/Feed/Feed';
 
 const App = () => {
   return (
-    <>
+    <View style={{backgroundColor: BACKGROUND_COLOR}}>
       <StatusBar backgroundColor={PRIMARY_COLOR} barStyle="dark-content" />
-      <SafeAreaView>
-        <Feed />
-      </SafeAreaView>
-    </>
+      {/* <Feed /> */}
+      <Detail />
+    </View>
   );
 };
 
