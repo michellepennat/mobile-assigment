@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Header, Spinner} from 'native-base';
+import {Spinner} from 'native-base';
 import {Text, SafeAreaView, FlatList} from 'react-native';
 import Card from '../../components/CardFeed/CardFeed';
 import styles from './Feed.style';
@@ -61,11 +61,12 @@ const Feed = ({navigation}) => {
           onEndReached={handleRefresh}
           onEndReachedThreshold={0.001}
           ListFooterComponent={renderFooter} // show activity indicator
+          showsVerticalScrollIndicator={true}
           refreshing={false}
         />
       )}
       {isLoading && <Spinner color="blue" />}
-      <Card />
+      {/* <Card /> */}
     </SafeAreaView>
   );
 };
