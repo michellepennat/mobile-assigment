@@ -20,23 +20,23 @@ export default CardDetail = ({
       <H1 style={[global.title, styles.title]}>{textName}</H1>
       <View style={[styles.row]}>
         <H2 style={[global.subtitle]}>Origin</H2>
-        <Text>{textOrigin}</Text>
+        <Text style={[global.information]}>{textOrigin}</Text>
       </View>
       <View style={[styles.row]}>
         <H2 style={[global.subtitle]}>Status</H2>
-        <Text>{textStatus}</Text>
+        <Text style={[global.information]}>{textStatus}</Text>
       </View>
       <View style={[styles.row]}>
         <H2 style={[global.subtitle]}>Species</H2>
-        <Text>{textSpecies}</Text>
+        <Text style={[global.information]}>{textSpecies}</Text>
       </View>
       <View style={[styles.row]}>
         <H2 style={[global.subtitle]}>Gender</H2>
-        <Text>{textGender}</Text>
+        <Text style={[global.information]}>{textGender}</Text>
       </View>
       <View style={[styles.row]}>
         <H2 style={[global.subtitle]}>Created</H2>
-        <Text>{textCreated}</Text>
+        <Text style={[global.information]}>{textCreated}</Text>
       </View>
     </View>
   );

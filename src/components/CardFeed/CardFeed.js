@@ -18,11 +18,11 @@ export default CardFeed = ({
       {/* <Image source={require(img)} /> */}
       <View style={[styles.row]}>
         <H2 style={[global.subtitle]}>Origin</H2>
-        <Text>{textOrigin}</Text>
+        <Text style={[global.information]}>{textOrigin}</Text>
       </View>
       <View style={[styles.row]}>
         <H2 style={[global.subtitle]}>Created</H2>
-        <Text>{textCreated}</Text>
+        <Text style={[global.information]}>{textCreated}</Text>
       </View>
     </TouchableOpacity>
   );

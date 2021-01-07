@@ -19,20 +19,18 @@ const Feed = () => {
       <Header style={[styles.header]}>
         <Text style={[styles.textHeader]}>Feed</Text>
       </Header>
-      
-        <FlatList
-          style={[styles.container]}
-          data={data}
-          keyExtractor={(item, i) => i + ''}
-          renderItem={renderItem}
-          // onRefresh={handleRefresh}
-          onEndReached={handleRefresh}
-          onEndReachedThreshold={0.08}
-          ListFooterComponent={renderFooter} // show activity indicator
-          refreshing={false}
-        />
-        <Card />
-      
+      <FlatList
+        style={[styles.container]}
+        data={data}
+        keyExtractor={(item, i) => i + ''}
+        renderItem={renderItem}
+        // onRefresh={handleRefresh}
+        onEndReached={handleRefresh}
+        onEndReachedThreshold={0.08}
+        ListFooterComponent={renderFooter} // show activity indicator
+        refreshing={false}
+      />
+      <Card />
     </SafeAreaView>
   );
 };

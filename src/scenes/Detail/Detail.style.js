@@ -1,11 +1,9 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {
   BACKGROUND_COLOR,
   PRIMARY_COLOR,
   WHITE_COLOR,
 } from '../../assets/style/_common';
-
-var {height} = Dimensions.get('window');
 
 export default style = StyleSheet.create({
   container: {

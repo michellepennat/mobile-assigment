@@ -1,7 +1,5 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {PRIMARY_COLOR, WHITE_COLOR} from './_common';
-
-var {height} = Dimensions.get('window');
 
 export default global = StyleSheet.create({
   title: {
@@ -14,10 +12,9 @@ export default global = StyleSheet.create({
     color: '#b3b3b3',
     width: '25%',
   },
-  information:{
+  information: {
     fontSize: 16,
-    fontWeight: 'bold',
-    color: '#b3b3b3',
+    color: '#6f6fb9',
     width: '25%',
-  }
+  },
 });
