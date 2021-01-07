@@ -13,15 +13,4 @@ export default style = StyleSheet.create({
     display: 'flex',
     padding: 20,
   },
-  header: {
-    backgroundColor: PRIMARY_COLOR,
-    display: 'flex',
-    alignItems: 'center',
-    alignItems: 'center',
-  },
-  textHeader: {
-    color: WHITE_COLOR,
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
 });

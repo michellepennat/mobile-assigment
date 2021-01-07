@@ -16,4 +16,16 @@ export default global = StyleSheet.create({
     fontSize: 16,
     color: '#6f6fb9',
   },
+  header: {
+    backgroundColor: PRIMARY_COLOR,
+    display: 'flex',
+    alignItems: 'center',
+    alignItems: 'center',
+    elevation: 0,
+  },
+  textHeader: {
+    color: WHITE_COLOR,
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
 });

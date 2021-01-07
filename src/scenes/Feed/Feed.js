@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {Container, Header, Spinner} from 'native-base';
-import {View, Text, SafeAreaView, FlatList} from 'react-native';
+import {Header, Spinner} from 'native-base';
+import {Text, SafeAreaView, FlatList} from 'react-native';
 import Card from '../../components/CardFeed/CardFeed';
 import styles from './Feed.style';
 import {useState} from 'react';
@@ -49,9 +49,6 @@ const Feed = ({navigation}) => {
 
   return (
     <SafeAreaView>
-      <Header style={[styles.header]}>
-        <Text style={[styles.textHeader]}>Feed</Text>
-      </Header>
       {list && (
         <FlatList
           style={[styles.container]}
@@ -59,7 +56,7 @@ const Feed = ({navigation}) => {
           keyExtractor={(item, i) => i + ''}
           renderItem={renderItem}
           onEndReached={handleRefresh}
-          onEndReachedThreshold={0.08}
+          onEndReachedThreshold={0.001}
           ListFooterComponent={renderFooter} // show activity indicator
           refreshing={false}
         />
