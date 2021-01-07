@@ -1,36 +1,43 @@
 import React from 'react';
 
-import {Text, TouchableOpacity, Image} from 'react-native';
+import {Text, Image, View} from 'react-native';
 import {H1, H2} from 'native-base';
+import styles from './CardDetail.style';
+import global from '../../assets/style/_main';
 
-export default CardDetail = (props) => {
-  const {
-      style, 
-      textName, 
-      textNameStyle, 
-      width, 
-      radius, 
-      onPressAction
-    } = props;
+export default CardDetail = ({
+  textName,
+  textOrigin,
+  textStatus,
+  textSpecies,
+  textGender,
+  textCreated,
+  img,
+}) => {
   return (
-    <TouchableOpacity>
-      <H1>{textName}</H1>
-      <Image />
-      <View>
-        <H2>Origin</H2>
-        <Text>Data</Text>
+    <View style={[styles.card]}>
+      {/* <Image source={require(img)}/> */}
+      <H1 style={[global.title, styles.title]}>{textName}</H1>
+      <View style={[styles.row]}>
+        <H2 style={[global.subtitle]}>Origin</H2>
+        <Text>{textOrigin}</Text>
       </View>
-      <View>
-        <H2>Created</H2>
-        <Text>Data</Text>
+      <View style={[styles.row]}>
+        <H2 style={[global.subtitle]}>Status</H2>
+        <Text>{textStatus}</Text>
       </View>
-    </TouchableOpacity>
+      <View style={[styles.row]}>
+        <H2 style={[global.subtitle]}>Species</H2>
+        <Text>{textSpecies}</Text>
+      </View>
+      <View style={[styles.row]}>
+        <H2 style={[global.subtitle]}>Gender</H2>
+        <Text>{textGender}</Text>
+      </View>
+      <View style={[styles.row]}>
+        <H2 style={[global.subtitle]}>Created</H2>
+        <Text>{textCreated}</Text>
+      </View>
+    </View>
   );
-};
-
-CardDetail.defaultProps = {
-  height: 55,
-  radius: 0,
-  width: '80%',
-  textStyle: {},
 };
