@@ -1,11 +1,29 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import {PRIMARY_COLOR, WHITE_COLOR} from './_common';
+import {
+  BACKGROUND_COLOR,
+  PRIMARY_COLOR,
+  WHITE_COLOR,
+} from '../../assets/style/_common';
 
 var {height} = Dimensions.get('window');
 
-export const style = StyleSheet.create({
+export default style = StyleSheet.create({
+  container: {
+    backgroundColor: BACKGROUND_COLOR,
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    padding: 20,
+  },
   header: {
     backgroundColor: PRIMARY_COLOR,
-    height: '10%',
+    display: 'flex',
+    alignItems: 'center',
+    alignItems: 'center',
+  },
+  textHeader: {
+    color: WHITE_COLOR,
+    fontSize: 18,
+    fontWeight: 'bold',
   },
 });
