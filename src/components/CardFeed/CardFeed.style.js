@@ -14,4 +14,9 @@ export default style = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  image: {
+    width: '100%',
+    height: 300,
+    marginVertical: 20,
+  },
 });

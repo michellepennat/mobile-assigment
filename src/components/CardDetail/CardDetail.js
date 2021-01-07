@@ -19,7 +19,7 @@ export default CardDetail = ({
       source={{
         uri: image,
       }}
-      style={{width: 100, height: 100}}
+      style={[styles.image]}
     />
     <H1 style={[global.title, styles.title]}>{name}</H1>
     <View style={[styles.row]}>

@@ -4,7 +4,6 @@ import {Text, TouchableOpacity, Image, View} from 'react-native';
 import {H1, H2} from 'native-base';
 import styles from './CardFeed.style';
 import global from '../../assets/style/_main';
-import {create} from 'react-test-renderer';
 
 export default CardFeed = ({
   name,
@@ -36,7 +35,7 @@ export default CardFeed = ({
       source={{
         uri: image,
       }}
-      style={{width: 100, height: 100}}
+      style={[styles.image]}
     />
     <View style={[styles.row]}>
       <H2 style={[global.subtitle]}>Origin</H2>
