@@ -1,9 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {
-  BACKGROUND_COLOR,
-  PRIMARY_COLOR,
-  WHITE_COLOR,
-} from '../../assets/style/_common';
+import {BACKGROUND_COLOR, PRIMARY_COLOR} from '../../assets/style/_common';
 
 export default style = StyleSheet.create({
   container: {
@@ -12,5 +8,9 @@ export default style = StyleSheet.create({
     height: '100%',
     display: 'flex',
     padding: 20,
+  },
+  topSafeArea: {
+    flex: 0,
+    backgroundColor: PRIMARY_COLOR,
   },
 });

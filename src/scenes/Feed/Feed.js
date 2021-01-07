@@ -7,6 +7,8 @@ import styles from './Feed.style';
 import {useState} from 'react';
 import {useEffect} from 'react';
 import FeedService from '../../services/feed/Feed.service';
+import {PRIMARY_COLOR} from '../../assets/style/_common';
+import AppStatusBar from '../../components/AppStatusBar/AppStatusBar';
 
 const Feed = ({navigation}) => {
   const [page, setPage] = useState(1);
@@ -48,7 +50,8 @@ const Feed = ({navigation}) => {
   const renderFooter = ({}) => <Text>Im loading</Text>;
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.topSafeArea}>
+      <AppStatusBar backgroundColor={PRIMARY_COLOR} barStyle="dark-content" />
       {list && (
         <FlatList
           style={[styles.container]}
