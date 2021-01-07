@@ -24,3 +24,11 @@ El trabajo final debe mostrar lo siguiente:
 * Typescript.
 * Linting y Prettier.
 * Conexión con GraphQL
+
+### Ejecutando en dispositivo Android:
+
+* npx react-native run-android
+
+### Ejecutando en dispositivo iOS:
+
+* npx react-native run-ios
